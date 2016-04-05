@@ -1,41 +1,31 @@
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Blog Entries</h1>
+<h1>Blog Entries</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Subtitle</th>
-      <th>Body</th>
-      <th>Image url1</th>
-      <th>Image url2</th>
-      <th>Image url3</th>
-      <th>Image url4</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @blog_entries.each do |blog_entry| %>
-      <tr>
-        <td><%= blog_entry.title %></td>
-        <td><%= blog_entry.date %></td>
-        <td><%= blog_entry.subtitle %></td>
-        <td><%= blog_entry.body %></td>
-        <td><%= blog_entry.image_url1 %></td>
-        <td><%= blog_entry.image_url2 %></td>
-        <td><%= blog_entry.image_url3 %></td>
-        <td><%= blog_entry.image_url4 %></td>
-        <td><%= link_to 'Show', blog_entry %></td>
-        <td><%= link_to 'Edit', edit_blog_entry_path(blog_entry) %></td>
-        <td><%= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="container-fluid">
+  <div class="entry">
+    <% @blog_entries.each do |blog_entry|%>
+      <div class="complete_entry">
+        <h1><%= blog_entry.title %></h1>
+        <h3><%= blog_entry.subtitle %></h3>
+        <p><%= blog_entry.date %></p>
+        <p><%= blog_entry.body %></p>
+      </div>
+
+
+
+<p><%= link_to 'Show', blog_entry %>
+<%= link_to 'Edit', edit_blog_entry_path(blog_entry) %>
+<%= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+
+      
     <% end %>
-  </tbody>
-</table>
-
-<br>
+  </div>
+    
+      
+</div>
 
 <%= link_to 'New Blog entry', new_blog_entry_path %>

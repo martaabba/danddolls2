@@ -1,14 +1,17 @@
-// Place all the styles related to the blog_entries controller here.
+// Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.complete_entry{
+
+
+.container{
     border-width:5px;	
     border-style:dotted solid;
     border-color:#CF63BC ;
+    margin:60px;
 }
 
-
-h3{
+p, 
+h1 {
     text-align: center;
 }

@@ -22,9 +22,8 @@
       <a class="navbar-brand" href="#">Damage and Dolls</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">most recent post</a></li>
-      <li><a href="#">ask for a rant, i've got an opinion</a></li> 
+      <li><%=link_to"home", blog_entries_path%></li>
+      <li><%=link_to"ask for a rant, i've got an opinion", static_pages_contact_path%></li> 
     </ul>
   </div>
 </nav>
